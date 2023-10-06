@@ -1,13 +1,17 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Header from './components/header';
+import Content from './components/content';
+import Footer from  './components/footer';
+
 
 function App() {
   return (
     <div className ="App">
+        {/* Calling the functions from another components */}
         <Header></Header>
-      <h1>Hello world!</h1>
-      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+        <Content></Content>
+        <Footer></Footer>
     </div>
    );
 }
