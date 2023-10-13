@@ -1,9 +1,11 @@
-function Footer() {
+//Writing a create component
+function Create() {
+
     return (
         <div>
-            <h2>My Footer in another component!</h2>
+            <h3>THIS is Create Component</h3>
         </div>
     )// writing the visual piece of this component
 }
 //This command allows us to import this function somewhere else
-export default Footer;
+export default Create;
