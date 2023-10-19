@@ -1,3 +1,4 @@
+//Importing the 'Books' component from the "./books" file
 import Books from "./books";
 
 //Component
@@ -39,12 +40,12 @@ function Read() {
             "categories": []
         }
 
-    ];//Some data associated with the read component
+    ];//Some data associated with the object books
 
     return (
         <div>
             <h3>THIS IS Read Component</h3>
-            {/*  */}
+            {/* Passing 'data' as 'myBooks' prop */}
             <Books myBooks={data}></Books>{ /* <books> is a child to read books is embeded in read component */}
         </div>
     )// writing the visual piece of this component

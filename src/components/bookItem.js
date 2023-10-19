@@ -1,27 +1,27 @@
+//Importing "Card" component from the "react-bootstrap" library
 import Card from 'react-bootstrap/Card';
 
 
 //New Component
-//This component is Granchild of read
-function BookItem(props){
-    
-    return (
-        
+//This component is Granchild of "Read" component
+function BookItem(props) {
+
+  return (
+    //Bootstrap card component
     <Card>
       <Card.Header>{props.myBook.title}</Card.Header>
-        <Card.Body>
+      <Card.Body>
         <blockquote className="blockquote mb-0">
-            <img src={props.myBook.thumbnailUrl}></img>
+          {/* Displaying an image with the book's thumbnail URL */}
+          <img src={props.myBook.thumbnailUrl}></img>
           <footer>
-            <p>{props.myBook.title}</p> <cite title = "Source Title">{props.myBook.authors}</cite>
+            {/* Displaying the book's title and authors */}
+            <p>{props.myBook.title}</p> <cite title="Source Title">{props.myBook.authors}</cite>
           </footer>
         </blockquote>
       </Card.Body>
     </Card>
-            // {/* <h3>{props.myBook.title}</h3>{/* curly brackets here means i can write js code */}
-            // {/* <img src = {props.myBook.thumbnailUrl}></img>
-            // <p>{props.myBook.authors[0]}</p> */}
-    );// writing the visual piece of this component
+  );// writing the visual piece of this component
 }
 
 export default BookItem;

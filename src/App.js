@@ -31,15 +31,14 @@ function App() {
         </Navbar>
         {/* Everything between here is going to change */}
         <Routes>
+          {/* Route for the homepage*/}
           <Route path='/' element={<Content></Content>}></Route>
+          {/* Route for the "Read" page */}
           <Route path='/read' element={<Read></Read>}></Route>
+          {/* Rout for the "Create" page */}
           <Route path='/create' element={<Create></Create>}></Route>
         </Routes>
 
-        {/* Calling the functions from another components */}
-        {/* <Header></Header>
-        <Content></Content>
-        <Footer></Footer> */}
       </div>
     </BrowserRouter>
   );
