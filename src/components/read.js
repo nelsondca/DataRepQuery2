@@ -1,46 +1,35 @@
+//
+import { useEffect, useState } from "react";
 //Importing the 'Books' component from the "./books" file
 import Books from "./books";
+//
+import axios from "axios";
 
 //Component
 function Read() {
 
-    //Array of object books
-    const data = [
-        {
-            "title": "Learn Git in a Month of Lunches",
-            "isbn": "1617292419",
-            "pageCount": 0,
-            "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/umali.jpg",
-            "status": "MEAP",
-            "authors": ["Rick Umali"],
-            "categories": []
-        },
-        {
-            "title": "MongoDB in Action, Second Edition",
-            "isbn": "1617291609",
-            "pageCount": 0,
-            "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/banker2.jpg",
-            "status": "MEAP",
-            "authors": [
-                "Kyle Banker",
-                "Peter Bakkum",
-                "Tim Hawkins",
-                "Shaun Verch",
-                "Douglas Garrett"
-            ],
-            "categories": []
-        },
-        {
-            "title": "Getting MEAN with Mongo, Express, Angular, and Node",
-            "isbn": "1617292036",
-            "pageCount": 0,
-            "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/sholmes.jpg",
-            "status": "MEAP",
-            "authors": ["Simon Holmes"],
-            "categories": []
-        }
+    //React hook called useState
+    const [data, setData] = useState([]);
+    
 
-    ];//Some data associated with the object books
+    //React hook called useeffect
+    //this going to go off and talk http for us using axios
+    useEffect(
+        () => {
+            //Asynchronous web development
+            axios.get('https://jsonblob.com/api/jsonblob/1161593332966481920')//this a promise "result of an operation"
+
+                //what do we want to do with the http response; 
+                .then(
+                    (response) => {
+                        setData(response.data.books);    
+                    }
+                )
+
+                //if it came back with an error or something code asks what we want him to do with that .
+                .catch()
+        }, []//empty array to stop this to repeat it over and ver
+    );
 
     return (
         <div>

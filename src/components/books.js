@@ -10,7 +10,7 @@ function Books(props) {//  props means standard for properties
     return props.myBooks.map(//map function will put out a indvidual object
         (book) => {
             //For each book in the array, create a 'bookItem' component.
-            //Pass the book object as 'myBook' prop and use 'book.isbn' as key
+            //Pass the book object as 'myBook' prop and use 'book.isbn' as unique identfier
             return <BookItem myBook={book} key={book.isbn}></BookItem>
         }
     );
